@@ -1,0 +1,9 @@
+/node_modules
+/dist
+/.turbo
+/.vercel
+/.DS_Store
+coverage
+storybook-static
+docs/node_modules
+docs/dist
