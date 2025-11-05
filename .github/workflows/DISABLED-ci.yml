@@ -9,14 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+        with: { node-version: 20.19.5 }
       - run: npm ci
       - run: npm run build
       - run: npm test -- --ci
       - run: npm run build:storybook
       - run: |
-          if [ -d docs ]; then npm --prefix docs ci || true; fi
-          if [ -d docs ]; then npm --prefix docs run build || true; fi
+          if [ -d docs ]; then npm run docs:build || true; fi
 
   release:
     needs: build-test
