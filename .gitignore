@@ -5,5 +5,5 @@
 /.DS_Store
 coverage
 storybook-static
-docs/node_modules
+docs/.astro
 docs/dist
